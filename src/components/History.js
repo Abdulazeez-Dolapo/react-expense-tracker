@@ -1,14 +1,16 @@
-import React from "react"
+import React, { useContext } from "react"
 import { TransactionCard } from "./TransactionCard"
+import { TransactionContext } from "../context/TransactionState"
 
 export const History = () => {
-	const arr = [1, 2, 3, 4]
+	const { transactions } = useContext(TransactionContext)
+	const resizedTransactionArray = transactions.slice(0, 5)
 	return (
 		<div>
 			<p>History</p>
 
-			{arr.map(a => (
-				<TransactionCard key={a} />
+			{resizedTransactionArray.map(transaction => (
+				<TransactionCard transaction={transaction} key={transaction.id} />
 			))}
 		</div>
 	)
