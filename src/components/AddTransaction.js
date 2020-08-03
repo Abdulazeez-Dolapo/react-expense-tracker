@@ -3,7 +3,7 @@ import { validateInput } from "../utils/validators"
 import { TransactionContext } from "../context/TransactionState"
 
 export const AddTransaction = () => {
-	const { addTransaction, transactions } = useContext(TransactionContext)
+	const { addTransaction } = useContext(TransactionContext)
 
 	const [description, setDescription] = useState("")
 	const [amount, setAmount] = useState(0)
@@ -34,7 +34,6 @@ export const AddTransaction = () => {
 		}
 
 		addTransaction(newTransaction)
-		console.log(transactions)
 		resetForm()
 	}
 
