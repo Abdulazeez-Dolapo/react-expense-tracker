@@ -1,26 +1,28 @@
 import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-import { Header } from "./components/Header"
-import { CashFlow } from "./components/CashFlow"
-import { Balance } from "./components/Balance"
-import { IncomeExpense } from "./components/IncomeExpense"
-import { History } from "./components/History"
-import { AddTransaction } from "./components/AddTransaction"
+import { AllTransactions } from "./views/AllTransactions"
+import { Home } from "./views/Home"
 
 import { TransactionProvider } from "./context/TransactionState"
 
 function App() {
 	return (
-		<TransactionProvider>
-			<div className="app">
-				<Header />
-				<CashFlow />
-				<Balance />
-				<IncomeExpense />
-				<History />
-				<AddTransaction />
-			</div>
-		</TransactionProvider>
+		<div className="app">
+			<TransactionProvider>
+				<Router>
+					<Switch>
+						<Route path="/" exact component={Home}></Route>
+
+						<Route
+							path="/all-transactions"
+							exact
+							component={AllTransactions}
+						></Route>
+					</Switch>
+				</Router>
+			</TransactionProvider>
+		</div>
 	)
 }
 

@@ -20,7 +20,7 @@ export const Balance = () => {
 
 	return (
 		<div>
-			<p>Your Balance</p>
+			<p>Balance</p>
 			<p>&#8358;{balance}</p>
 		</div>
 	)

@@ -11,7 +11,7 @@ export const CashFlow = () => {
 
 	return (
 		<div>
-			<p>Your Total Cash flow</p>
+			<p>Total Cash flow</p>
 			<p>&#8358;{totalCashFlow}</p>
 		</div>
 	)
