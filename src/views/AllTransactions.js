@@ -6,15 +6,23 @@ import { TransactionContext } from "../context/TransactionState"
 
 export const AllTransactions = () => {
 	const { transactions } = useContext(TransactionContext)
+	let displayTransactions
+
+	if (transactions.length > 0) {
+		displayTransactions = transactions.map(transaction => (
+			<TransactionCard transaction={transaction} key={transaction.id} />
+		))
+	} else {
+		displayTransactions = <p>You have not made any transactions</p>
+	}
 
 	return (
-		<div>
+		<div className="all-transactions">
 			<p>
 				<Link to="/">Home</Link>
 			</p>
-			{transactions.map(transaction => (
-				<TransactionCard transaction={transaction} key={transaction.id} />
-			))}
+			<h2>All Transactions</h2>
+			{displayTransactions}
 		</div>
 	)
 }

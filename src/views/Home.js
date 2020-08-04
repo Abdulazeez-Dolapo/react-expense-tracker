@@ -1,7 +1,6 @@
 import React from "react"
 
 import { Header } from "../components/Header"
-import { CashFlow } from "../components/CashFlow"
 import { Balance } from "../components/Balance"
 import { IncomeExpense } from "../components/IncomeExpense"
 import { History } from "../components/History"
@@ -11,7 +10,6 @@ export const Home = () => {
 	return (
 		<div className="app">
 			<Header />
-			<CashFlow />
 			<Balance />
 			<IncomeExpense />
 			<History />

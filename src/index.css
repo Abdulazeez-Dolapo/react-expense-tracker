@@ -1,1 +1,147 @@
-
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: whitesmoke;
+	font-family: verdana helvetica sans-serif Tahoma, sans-serif;
+}
+.app {
+	margin: 0 auto;
+	width: 40%;
+	padding: 8px;
+}
+h2 {
+	text-align: center;
+	padding-bottom: 1rem;
+}
+.title {
+	font-size: 0.9rem;
+	font-weight: 600;
+	font-family: helvetica;
+}
+.big {
+	font-size: 1.7rem;
+	padding-bottom: 0.2rem;
+}
+.error {
+	color: red;
+}
+.green {
+	color: green;
+}
+.income-expense {
+	display: flex;
+	height: 3.8rem;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 1px 1px 3px gray;
+	margin-bottom: 1rem;
+	background-color: white;
+	border-radius: 3px;
+}
+.income {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+	width: 40%;
+	font-weight: 600;
+}
+.line {
+	height: 70%;
+	width: 1px;
+	background-color: rgb(167, 155, 155);
+}
+.center {
+	text-align: center;
+}
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(167, 155, 155);
+	margin: 0.4rem 0;
+}
+.card {
+	display: flex;
+	height: 42px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 1px 1px 3px gray;
+	margin-bottom: 0.5rem;
+	background-color: white;
+	border-radius: 3px;
+	color: gray;
+	word-break: break-all;
+}
+.card:hover .delete {
+	display: inline-block;
+}
+li {
+	list-style-type: none;
+}
+.delete {
+	display: none;
+	font-size: 1.2rem;
+	background-color: red;
+	color: white;
+	width: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+	margin-right: 10px;
+}
+.delete:hover {
+	cursor: pointer;
+	background-color: rgb(136, 54, 54);
+}
+.green-border {
+	border-right: 4px solid green;
+}
+.red-border {
+	border-right: 4px solid red;
+}
+.bold {
+	font-weight: 600;
+}
+.message {
+	font-size: 0.9rem;
+	margin-top: 2px;
+}
+.message-display {
+	padding: 0.5rem 0;
+}
+.link {
+	margin-top: 0.7rem;
+	text-align: right;
+}
+input,
+select {
+	width: 100%;
+	height: 1.7rem;
+	margin: 0.3rem 0;
+	border: none;
+	box-shadow: 1px 1px 3px gray;
+}
+::placeholder {
+	padding-left: 0.5rem;
+}
+label {
+	font-size: 0.8rem;
+}
+button {
+	width: 100%;
+	background-color: rgb(19, 19, 231);
+	color: white;
+	font-size: 1rem;
+	border: none;
+	height: 32px;
+}
+button:hover {
+	cursor: pointer;
+}
+.all-transactions {
+	width: 40%;
+	margin: 0 auto;
+	padding: 20px 0;
+}

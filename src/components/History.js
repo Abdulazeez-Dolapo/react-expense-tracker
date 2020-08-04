@@ -11,12 +11,12 @@ export const History = () => {
 	return (
 		<div>
 			<p>History</p>
-
+			<div className="divider"></div>
 			{resizedTransactionArray.map(transaction => (
 				<TransactionCard transaction={transaction} key={transaction.id} />
 			))}
 
-			<p>
+			<p className="link">
 				<Link to="/all-transactions">View all transactions</Link>
 			</p>
 		</div>

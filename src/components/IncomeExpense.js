@@ -16,15 +16,21 @@ export const IncomeExpense = () => {
 		.toFixed(2)
 
 	return (
-		<div>
-			<div>
-				<span>INCOME</span>
-				<span>&#8358;{totalIncome}</span>
+		<div className="income-expense">
+			<div className="income">
+				<div className="center">
+					<p>INCOME</p>
+					<p className="green">&#8358;{totalIncome}</p>
+				</div>
 			</div>
 
-			<div>
-				<span>EXPENSE</span>
-				<span>&#8358;{totalExpense}</span>
+			<div className="line"></div>
+
+			<div className="income">
+				<div className="center">
+					<p>EXPENSE</p>
+					<p className="error">&#8358;{totalExpense}</p>
+				</div>
 			</div>
 		</div>
 	)

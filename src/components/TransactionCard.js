@@ -6,14 +6,28 @@ export const TransactionCard = ({ transaction }) => {
 	const sign = transaction.type === "income" ? "+" : "-"
 
 	return (
-		<>
-			<button onClick={() => deleteTransaction(transaction.id)}>
-				delete
-			</button>
+		<div
+			className={
+				transaction.type === "income"
+					? "card green-border"
+					: "card red-border"
+			}
+		>
+			<div>
+				<p
+					className="delete"
+					onClick={() => deleteTransaction(transaction.id)}
+				>
+					x
+				</p>
+				<span>{transaction.description}</span>
+			</div>
 			<li>
-				{transaction.description} {sign}
-				{transaction.amount}
+				<span className="bold">
+					{sign}
+					{transaction.amount}
+				</span>
 			</li>
-		</>
+		</div>
 	)
 }
