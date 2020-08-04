@@ -145,3 +145,45 @@ button:hover {
 	margin: 0 auto;
 	padding: 20px 0;
 }
+
+@media screen and (min-width: 200px) {
+	.app,
+	.all-transactions {
+		width: 98%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.app,
+	.all-transactions {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.app,
+	.all-transactions {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.app,
+	.all-transactions {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.app,
+	.all-transactions {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.app,
+	.all-transactions {
+		width: 40%;
+	}
+}
